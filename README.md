@@ -49,6 +49,6 @@ pip install -r requirements.txt
 ```
 python main.py
 ```
-- To switch between NCE contrastive loss and softmax contrastive loss, change the `use_nce` flag. To change the number of anchor points and number of negative samples, change the `num_anchors` and `num_negative_samples` respectively.
+- To switch between NCE contrastive loss and softmax contrastive loss, change the `use_nce` flag. To change the number of anchor points and number of negative samples, modify the `num_anchors` and `num_negative_samples` respectively.
 ## Queries
 In case of any queries, please open an issue. We will respond as soon as possible. 
