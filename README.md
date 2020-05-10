@@ -39,6 +39,16 @@ The 7 datasets used to empirically prove our results are:<br>
 
 
 ## Instructions for running
-
+The code has been tested on Python 3.6.8 and PyTorch 1.5.1. 
+- Install all the dependencies using the following command:
+```
+pip install -r requirements.txt
+```
+- Create a folder `features` to save the trained models
+- To train COBRA, use the following command:
+```
+python main.py
+```
+- To switch between NCE contrastive loss and softmax contrastive loss, change the `use_nce` flag. To change the number of anchor points and number of negative samples, change the `num_anchors` and `num_negative_samples` respectively.
 ## Queries
 In case of any queries, please open an issue. We will respond as soon as possible. 
