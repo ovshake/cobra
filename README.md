@@ -8,14 +8,14 @@ We present a novel framework COBRA that aims to train two modalities (image and 
 **A visualisation of the loss function**:
 <br>
 <br>
-![Supervised Contrastive Loss](https://i.ibb.co/MhnvjnF/CPC-Diagram-updated.jpg)
+![Supervised Contrastive Loss](https://github.com/ovshake/cobra/blob/master/images/CPCLoss.JPG)
 
 
 
 ## Architecture
 <br>
 <br>
-![Model](https://i.ibb.co/JdNHRyW/Architecture-updated.jpg)
+![Model](https://github.com/ovshake/cobra/blob/master/images/Architecture.JPG)
 
 
 ## Datasets
@@ -27,6 +27,17 @@ The 7 datasets used to empirically prove our results are:<br>
 5. FakeNewsNet
 6. MeTooMA
 7. CrisisMMD
+
+## Results
+
+![Wikipedia](https://github.com/ovshake/cobra/blob/master/images/Wiki.JPG)
+![MS-COCO](https://github.com/ovshake/cobra/blob/master/images/MSCoco.JPG)
+![PKU-XMedia](https://github.com/ovshake/cobra/blob/master/images/PKU-XMedia.JPG)
+![MS-COCO](https://github.com/ovshake/cobra/blob/master/images/NUS-Wide.JPG)
+![MS-COCO](https://github.com/ovshake/cobra/blob/master/images/FakeNewsNet.JPG)
+![MS-COCO](https://github.com/ovshake/cobra/blob/master/images/MeTooMA.JPG)
+![MS-COCO](https://github.com/ovshake/cobra/blob/master/images/CrisisMMD.JPG)
+
 
 ## Instructions for running
 
