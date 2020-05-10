@@ -1,6 +1,5 @@
 def main(config):
-	from COBRA import Solver # COBRA implementation with softmax contrastive loss
-	# from COBRA_nce import Solver # COBRA implementation with NCE contrastive loss
+	from COBRA import Solver
 
 	solver = Solver(config)
 	cudnn.benchmark = True
