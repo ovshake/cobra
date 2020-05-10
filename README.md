@@ -1,4 +1,4 @@
-# COBRA: COBRA: Contrastive Bi-Modal Representation Algorithm
+# COBRA: Contrastive Bi-Modal Representation Algorithm
 
 This repository contains the code for the paper COBRA: Contrastive Bi-Modal Representation Algorithm by [Vishaal Udandarao](https://vishaal27.github.io/), [Abhishek Maiti](http://ovshake.me), Deepak Srivatsav, Suryatej Reddy, Yifang Yin and [Rajiv Ratn Shah](http://faculty.iiitd.ac.in/~rajivratn/). 
 
@@ -13,9 +13,8 @@ We present a novel framework COBRA that aims to train two modalities (image and 
 
 
 ## Architecture
-<br>
-<br>
-![Model](https://github.com/ovshake/cobra/blob/master/images/Architecture.JPG)
+
+![](https://github.com/ovshake/cobra/blob/master/images/Architecture.JPG)
 
 
 ## Datasets
