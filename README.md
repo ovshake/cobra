@@ -1,6 +1,6 @@
 # COBRA: Contrastive Bi-Modal Representation Algorithm
 
-This repository contains the code for the paper COBRA: Contrastive Bi-Modal Representation Algorithm by [Vishaal Udandarao](https://vishaal27.github.io/), [Abhishek Maiti](http://ovshake.me), Deepak Srivatsav, Suryatej Reddy, Yifang Yin and [Rajiv Ratn Shah](http://faculty.iiitd.ac.in/~rajivratn/). 
+This repository contains the code for the paper COBRA: Contrastive Bi-Modal Representation Algorithm [(ArXiv)](https://arxiv.org/abs/2005.03687) by [Vishaal Udandarao](https://vishaal27.github.io/), [Abhishek Maiti](http://ovshake.me), Deepak Srivatsav, Suryatej Reddy, Yifang Yin and [Rajiv Ratn Shah](http://faculty.iiitd.ac.in/~rajivratn/). 
 
 ## Methodology 
 We present a novel framework COBRA that aims to train two modalities (image and text) in a joint fashion inspired by the **Contrastive Predictive Coding (CPC)** and **Noise Contrastive Estimation (NCE)** paradigms which preserve both inter and intra-class relationships. We empirically show that this framework reducesthe modality gap significantly and generates a robust and task agnostic joint-embedding space. We outperform existing work on four diverse downstream tasks spanning across seven benchmark cross-modal datasets.<br>
