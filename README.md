@@ -27,6 +27,9 @@ The 7 datasets used to empirically prove our results are:<br>
 6. MeTooMA
 7. CrisisMMD
 
+## t-SNEs
+![](https://github.com/ovshake/cobra/blob/master/images/t-SNE_1.JPG)
+![](https://github.com/ovshake/cobra/blob/master/images/t-SNE_2.JPG)
 ## Results
 
 ![Wikipedia](https://github.com/ovshake/cobra/blob/master/images/Wiki.JPG)
