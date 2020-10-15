@@ -427,10 +427,15 @@ class Solver(object):
 						valid_d_loss = self.to_data(criterion(self.to_var(torch.tensor(pre_labels)), valid_labels))
 						if valid_loss_min > valid_d_loss and not self.just_valid:
 							valid_loss_min = valid_d_loss
-							valid_pre = utils.predict(lambda x: Nets[view_id](x)[-1].view([x.shape[0], -1]), self.valid_data[view_id], self.batch_size).reshape([self.valid_data[view_id].shape[0], -1])
-							test_pre = utils.predict(lambda x: Nets[view_id](x)[-1].view([x.shape[0], -1]), self.test_data[view_id], self.batch_size).reshape([self.test_data[view_id].shape[0], -1])
-							valid_pres.append(valid_pre)
-							test_pres.append(test_pre)
+
+							valid_pre_0 = utils.predict(lambda x: Nets[0](x)[-1].view([x.shape[0], -1]), self.valid_data[0], self.batch_size).reshape([self.valid_data[0].shape[0], -1])
+							valid_pre_1 = utils.predict(lambda x: Nets[1](x)[-1].view([x.shape[0], -1]), self.valid_data[1], self.batch_size).reshape([self.valid_data[1].shape[0], -1])
+
+							test_pre_0 = utils.predict(lambda x: Nets[0](x)[-1].view([x.shape[0], -1]), self.test_data[0], self.batch_size).reshape([self.test_data[0].shape[0], -1])
+							test_pre_1 = utils.predict(lambda x: Nets[1](x)[-1].view([x.shape[0], -1]), self.test_data[1], self.batch_size).reshape([self.test_data[1].shape[0], -1])
+
+							valid_pres.append(valid_pre_0)
+							test_pres.append(test_pre_0)
 						elif self.just_valid:
 							tr_d_loss[view_id].append(np.mean(mean_tr_d_loss[view_id]))
 							val_d_loss[view_id].append(valid_d_loss[view_id])
@@ -447,10 +452,13 @@ class Solver(object):
 		torch.save(AEs[0].state_dict(), './features/'+self.datasets+'_image_decoder_weights')
 		torch.save(AEs[1].state_dict(), './features/'+self.datasets+'_text_decoder_weights')
 
+		valid_pres_all = [valid_pre_0, valid_pre_1]
+		test_pres_all = [test_pre_0, test_pre_1]
+
 		if not self.just_valid:
 			for view_id in range(self.n_view):
-				sio.savemat('features/' + self.datasets + '_' + str(view_id) + '.mat', {'valid_fea': valid_pre, 'valid_lab': self.valid_labels[view_id], 'test_fea': test_pre, 'test_lab': self.test_labels[view_id]})
-			return [valid_pre, test_pre]
+				sio.savemat('features/' + self.datasets + '_' + str(view_id) + '.mat', {'valid_fea': valid_pres_all[view_id], 'valid_lab': self.valid_labels[view_id], 'test_fea': test_pres_all[view_id], 'test_lab': self.test_labels[view_id]})
+			return [valid_pre_0, test_pre_0]
 		else:
 			self.tr_d_loss[view_id] = tr_d_loss[view_id]
 			self.tr_ae_loss[view_id] = tr_ae_loss[view_id]
